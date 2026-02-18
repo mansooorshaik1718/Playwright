@@ -65,11 +65,13 @@ test('test2', async ({ page }) => {
     await page.locator('//li[@aria-label="NEW YORK, NY 10001"]').click({ timeout: 50000 });
 
     // commodity information
-    await page.locator('//input[@id="comDesc"]').fill('Electronics');
-    await page.locator('//li[@aria-label="Audio And Video Electronics"]').click()
-
+    await page.locator('//input[@id="comDesc"]').fill('cotton');
+    await page.locator('//li[@aria-label="Bags, Jute or Cotton"]').click()
+    
+    //cargo value
     await page.locator('//input[@automationdata_id="cargotextid"]').fill('100')
 
+    
     await page.locator('//input[@automationdata_id="palletsid"]').fill('10')
 
     await page.locator('//p-radiobutton[@automationdata_id="generalcargoid"]').click()
